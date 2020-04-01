@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全部热门作品" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-l5-dJM">
+                    <rect key="frame" x="118.5" y="16" width="84" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="dFy-JY-soh">
+                    <rect key="frame" x="212.5" y="17" width="10" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="7LV-4H-dDC"/>
+                        <constraint firstAttribute="width" constant="10" id="fZ3-G6-ib4"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYI-cu-dhY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.29803921570000003" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="oMP-l5-dJM" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="4KT-Hb-0Fa"/>
+                <constraint firstItem="VYI-cu-dhY" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="JR1-Sh-9jH"/>
+                <constraint firstItem="dFy-JY-soh" firstAttribute="centerY" secondItem="oMP-l5-dJM" secondAttribute="centerY" id="PRm-fs-vz8"/>
+                <constraint firstItem="VYI-cu-dhY" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="RuK-9l-grb"/>
+                <constraint firstAttribute="trailing" secondItem="VYI-cu-dhY" secondAttribute="trailing" id="TS6-VL-t4I"/>
+                <constraint firstItem="oMP-l5-dJM" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="brc-Ly-Oec"/>
+                <constraint firstAttribute="bottom" secondItem="VYI-cu-dhY" secondAttribute="bottom" constant="5.5" id="uP1-cd-al2"/>
+                <constraint firstItem="dFy-JY-soh" firstAttribute="leading" secondItem="oMP-l5-dJM" secondAttribute="trailing" constant="10" id="vrQ-mh-GJx"/>
+            </constraints>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="right" width="46" height="86"/>
+    </resources>
+</document>

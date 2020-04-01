@@ -1,0 +1,62 @@
+//
+//  Project-Prefix.pch
+//  MediatorSystemArchitecture
+//
+//  Created by Sper on 16/6/8.
+//  Copyright © 2016年 WM. All rights reserved.
+//
+
+#ifndef Project_Prefix_pch
+#define Project_Prefix_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIColor+Extension.h"
+#import "UIView+Extend.h"
+#import "UIImage+ImageFromColor.h"
+#import "RequestManager.h"
+#import "UIImageView+WebCache.h"
+#import "URLManager.h"
+#import "MJRefresh.h"
+#import "AppDataManager.h"
+#import "SwitchViewController.h"
+#import "UrlSchemeSkip.h"
+#import "NSObject+WMModel.h"
+#import "WMSwizzleMethod.h"
+#import "NSDictionary+NilSafe.h"
+//#import <IJKMediaFramework/IJKMediaFramework.h>
+#import <Masonry.h>
+#import <MBProgressHUD.h>
+#import <OneAPM/OneAPM.h>
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define iOSVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#define AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+#define UIColorFromRGB(rgbValue)[UIColor colorWithRed:((float)((rgbValue&0xFF0000)>>16))/255.0 green:((float)((rgbValue&0xFF00)>>8))/255.0 blue:((float)(rgbValue&0xFF))/255.0 alpha:1.0]
+#define UIColorFromARGB(rgbValue,a) ([UIColor colorWithRed:((float)((rgbValue&0xFF0000)>>16))/255.0 green:((float)((rgbValue&0xFF00)>>8))/255.0 blue:((float)(rgbValue&0xFF))/255.0 alpha:a])
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define isIphone4     kScreenHeight <= 480
+#define isIphone5     (kScreenHeight <= 568 &&  kScreenHeight > 480)
+#define isIphone6     (kScreenHeight <= 667 &&  kScreenHeight > 568)
+#define isIphone6p    (kScreenHeight <= 736 &&  kScreenHeight > 667)
+
+#define ISIos7      ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 && [[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
+#define ISIos8      ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 && [[[UIDevice currentDevice] systemVersion] floatValue] < 9.0)
+#define ISIos9      ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+
+// 创建颜色
+#define PCColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+// 随机颜色
+#define PCRandomColor PCColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define UIHeightFromfloat(x) x*(CGRectGetWidth([UIScreen mainScreen].bounds)/320)
+
+#endif /* Project_Prefix_pch */

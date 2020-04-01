@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SensationCell">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="179"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-SE-KwL">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="149"/>
+                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24D-J3-5Hg">
+                        <rect key="frame" x="0.0" y="149" width="153" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="d7M-kk-w3V"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="24D-J3-5Hg" secondAttribute="bottom" id="Hhn-eL-qRf"/>
+                <constraint firstItem="24D-J3-5Hg" firstAttribute="top" secondItem="YPU-SE-KwL" secondAttribute="bottom" id="Olk-oO-JPJ"/>
+                <constraint firstItem="YPU-SE-KwL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hc0-th-7rh"/>
+                <constraint firstItem="YPU-SE-KwL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hyl-lM-MJU"/>
+                <constraint firstItem="24D-J3-5Hg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lqm-Ay-UOw"/>
+                <constraint firstAttribute="trailing" secondItem="YPU-SE-KwL" secondAttribute="trailing" id="mcg-2T-weg"/>
+                <constraint firstAttribute="trailing" secondItem="24D-J3-5Hg" secondAttribute="trailing" id="mwH-gM-ivc"/>
+            </constraints>
+            <size key="customSize" width="153" height="179"/>
+            <connections>
+                <outlet property="icon" destination="YPU-SE-KwL" id="6OF-9z-nja"/>
+                <outlet property="name" destination="24D-J3-5Hg" id="XAm-Wk-SZ9"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="257.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
